@@ -1,0 +1,53 @@
+.item {
+    height: 2.5em;
+    margin-bottom: 0.5em;
+    border-radius: 15px;
+    z-index: 999;
+    box-sizing: border-box;
+}
+
+.item:hover {
+    cursor: pointer;
+    border: 1px solid black;
+    transform: scaleY(1.1);
+}
+
+
+.item__1 {
+    background-color: red;
+    width: 30%;
+}
+
+.item__2 {
+    background-color: orange;
+    width: 40%;
+}
+
+.item__3 {
+    background-color: rgb(252, 207, 8);
+    width: 50%;
+}
+
+.item__4 {
+    background-color: green;
+    width: 60%;
+}
+.item__5 {
+    background-color: blue;
+    width: 70%;
+}
+
+.item__6 {
+    background-color: indigo;
+    width: 80%;
+}
+
+.item__7 {
+    background-color: violet;
+    width: 90%;
+}
+
+.item__8 {
+    background-color: rgb(30, 30, 34);
+    width: 100%;
+}

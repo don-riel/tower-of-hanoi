@@ -1,0 +1,24 @@
+.dropPlace {
+    background-color: rgb(28, 184, 150);
+    flex: 1;
+    height: 50vh;
+    padding: 0.5em;
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative; 
+    border-radius: 20px;
+}
+
+.dropPlace::before {
+    content: "";
+    width: 1em;
+    height: 90%;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;  
+}
+

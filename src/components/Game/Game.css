@@ -1,0 +1,11 @@
+.game-wrapper {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 1300px;
+    border-radius: 20px;
+    background-color: wheat;
+    
+}
+
+
