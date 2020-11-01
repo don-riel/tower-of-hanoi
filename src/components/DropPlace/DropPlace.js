@@ -6,8 +6,8 @@ import './DropPlace.css';
 class DropPlace extends Component {
   
     componentDidMount() {
-        const items = document.getElementById("drp1").childNodes;
-        //make top item draggable
+        const items = document.getElementById("tower-1").childNodes;
+        //default - make top item draggable
         items[0].draggable = "true";
     }
    
@@ -15,11 +15,11 @@ class DropPlace extends Component {
         e.preventDefault();
         const data = e.dataTransfer.getData('text');
         const item = document.getElementById(data);
-        const child = e.target.childNodes;
-        const lastDropPlace = document.getElementById('drp3')
+        const child = e.target.childNodes; //tower item is dropped on
+        const lastDropPlace = document.getElementById('tower-3')
+        //transfering items between towers
         if(item !== null) {
             const dragFrom = item.parentElement;
-
             if(child.length === 0) {
                 e.target.prepend(item);
                 this.props.incrementMoves();
@@ -29,8 +29,12 @@ class DropPlace extends Component {
                    this.props.incrementMoves();
                }
            }
-
+           //make only top items draggable
            if(dragFrom.childNodes.length > 0) {
+               dragFrom.childNodes.forEach((c) => {
+                    c.removeAttribute("draggable")
+            
+               })
                dragFrom.childNodes[0].draggable = "true";  
            }
            
@@ -39,7 +43,7 @@ class DropPlace extends Component {
            });
            child[0].draggable = "true"
         }
-        
+        //listener if game is solved
         if(this.props.items.length ===  lastDropPlace.childNodes.length) {
             this.props.onGameSolved();
         }
