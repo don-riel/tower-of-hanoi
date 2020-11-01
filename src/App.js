@@ -84,7 +84,7 @@ class App extends Component {
 
     return (
     <div className="App">
-    <small className="notice">Notice: This site does not work on mobile devices!</small>
+    <small className="notice">Notice: This site does not work yet on mobile devices!</small>
         {/* Header */}
       <div className="title">
         <h1>ower of Hanoi</h1>

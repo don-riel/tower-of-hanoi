@@ -11,6 +11,7 @@ body {
   position: relative;
 }
 
+
 .title {
   width: 300px;
   margin: 0 auto;
@@ -33,7 +34,7 @@ h1 {
 .react-reveal{
   position: absolute;
   bottom: -45%;
-  left: 0;
+  left: -3%;
   font-size: 4rem;
   padding: 0;
   margin: 0;
@@ -189,3 +190,9 @@ small {
   color: white;
 }
 
+@media (max-width: 600px) {
+  .App div{
+    display: none;
+  }
+  
+}
