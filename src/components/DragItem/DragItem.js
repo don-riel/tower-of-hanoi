@@ -1,6 +1,5 @@
 import React, { Component} from 'react';
 import './DragItem.css'
-import Bounce from 'react-reveal/Bounce';
 
 class DragItem extends Component {
     drag = (e) => {
