@@ -18,7 +18,9 @@ class DragItem extends Component {
                 id={this.props.id} 
                 onDragStart={this.drag} 
                 onDragOver={this.notAllowDrop} 
-                className={`item item__${this.props.id}`}>   
+                className={`item item__${this.props.id}`}
+            > 
+            {this.props.id}  
             </div>
         );
     }

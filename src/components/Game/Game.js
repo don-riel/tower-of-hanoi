@@ -14,7 +14,7 @@ const Game = ({...props}) => {
             >
                 {props.items.map(item => {
                     return (    
-                        <DragItem key={item} id={item} />           
+                        <DragItem key={item} id={item} />          
                     )
                 })}
             </DropPlace>
