@@ -45,7 +45,9 @@ class DropPlace extends Component {
         }
         //listener if game is solved
         if(this.props.items.length ===  lastDropPlace.childNodes.length) {
-            this.props.onGameSolved();
+            const tower3 = document.getElementById("tower-3");
+            tower3.childNodes[0].removeAttribute("draggable")
+            this.props.onGameSolved();    
         }
     };
 

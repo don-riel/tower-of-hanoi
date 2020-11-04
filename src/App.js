@@ -13,7 +13,7 @@ class App extends Component {
 
     this.state = {
       items: [1,2,3],
-      solved: false,
+      isSolved: false,
       moves: 0,
       restart: true, //refresh game, uses key atrribute to trigger rerender
       minMoves: 7
@@ -47,8 +47,9 @@ class App extends Component {
     //game ended
     const onGameSolved = () => {
       this.setState({
-        solved: true
-      })
+        isSolved: true
+      });
+      
     }
     //counts number of moves
     const incrementMoves = () => {
@@ -60,21 +61,22 @@ class App extends Component {
     const restart = () => {
       this.setState({
         moves: 0,
-        restart: !this.state.restart
+        restart: !this.state.restart,
+        isSolved: false
       })
     }
 
     const onPlayAgain = () => {
       this.setState({
         moves: 0,
-        solved: !this.state.solved,
+        isSolved: !this.state.isSolved,
       })
-      restart()
+      restart();
     }
-
+    //display how to play text
     const showHowToPlayInfo = () => {
       const popUp = document.getElementsByClassName("how-to-play-info");
-      popUp[0].className = `${popUp[0].className} toggle-display`
+      popUp[0].className = `${popUp[0].className} toggle-display`;
     }
 
     const hideHowToPlayInfo = (e) => {
@@ -125,9 +127,9 @@ class App extends Component {
           }  
           </div>
       </Jello>
-      {/* Pop up div when game is solved*/}
+      {/* Pop up div when game is isSolved*/}
       {
-        this.state.solved 
+        this.state.isSolved 
         ? 
           (<Bounce top>
             <div className="pop-up pop-up-solved">

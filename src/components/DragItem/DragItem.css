@@ -5,11 +5,18 @@
     z-index: 999;
     box-sizing: border-box;
     text-align: center;
+    animation-name: test;
+    animation-duration: 1s;
+}
+
+@keyframes test {
+    0% {margin-bottom: -20px;}
+    100% {margin-bottom: 0.5em;}
 }
 
 .item:hover {
     cursor: grab;
-    border: 1px solid black;
+    border: 2px solid black;
     transform: scaleY(1.1);
 }
 

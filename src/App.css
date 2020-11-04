@@ -31,14 +31,7 @@ h1 {
   
   font-size: 2rem;
 }
-.react-reveal{
-  position: absolute;
-  bottom: -45%;
-  left: -3%;
-  font-size: 4rem;
-  padding: 0;
-  margin: 0;
-}
+
 h4 {
   margin-bottom: 0;
 }
@@ -50,6 +43,16 @@ h4,p{
 small {
   margin-top: 0.5em;
   font-size: 1rem;
+}
+
+/* letter "T" on header */
+.react-reveal{
+  position: absolute;
+  bottom: -45%;
+  left: -3%;
+  font-size: 4rem;
+  padding: 0;
+  margin: 0;
 }
 
 /* pop-up divs */
@@ -67,7 +70,8 @@ small {
 /* buttons/links general style */
 .btn {
   font-size: 2rem;
-  text-align: center;  
+  text-align: center;
+  text-decoration: underline;
 }
 
 .btn:hover {
@@ -80,6 +84,7 @@ small {
 .how-to-play-box {
   position: relative;
 }
+
 .btn-how-to-play {
   font-size: 1rem;
   text-align: center;
@@ -99,10 +104,10 @@ small {
   height: 300px; 
   position: absolute;
   z-index: 9999;
-  
-
+  display: none;
 }
 
+/* pop-up on click*/
 .how-to-play-txt {
   display: flex;
   flex-direction: column;
@@ -119,13 +124,10 @@ small {
   width: 30%;
   margin: 0 auto;
 }
-
+/* class applied/removed onClick*/
 .toggle-display {
   display: flex;
 }
-
-
-
 
 /*game box*/
 .main {
