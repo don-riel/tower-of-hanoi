@@ -98,18 +98,18 @@ class App extends Component {
           onClick={showHowToPlayInfo}>How to Play?
         </p>
         <div className="how-to-play-info">
-        <Bounce top>
-          <div className="pop-up how-to-play-txt ">
-              <p>Transfer the bars to the rightmost tower in the same order.</p> 
-                  <p>It is not allowed to put a bar on top of a smaller bar.</p>
-              <div 
-                className="btn btn-okay" 
-                onClick={e => {hideHowToPlayInfo(e)}}
-              >
-              I'm Ready
-              </div> 
-          </div>
-        </Bounce>  
+          <Bounce top>
+            <div className="pop-up how-to-play-txt ">
+                <p>Transfer the bars to the rightmost tower in the same order.</p> 
+                    <p>It is not allowed to put a bar on top of a smaller bar.</p>
+                <div 
+                  className="btn btn-okay" 
+                  onClick={e => {hideHowToPlayInfo(e)}}
+                >
+                I'm Ready
+                </div> 
+            </div>
+          </Bounce>  
         </div>
       </div>
       {/* Game box*/}
