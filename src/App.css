@@ -57,6 +57,7 @@ small {
 
 /* pop-up divs */
 .pop-up {
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;

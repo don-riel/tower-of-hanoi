@@ -2,7 +2,6 @@ import Game from './components/Game/Game'
 import './App.css';
 import React, { Component} from 'react';
 import Bounce from 'react-reveal/Bounce';
-import Jello from 'react-reveal/Jello';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown, faAngleUp, faRedo} from '@fortawesome/free-solid-svg-icons'
 
@@ -102,7 +101,7 @@ class App extends Component {
         <div className="how-to-play-info">
           <Bounce top>
             <div className="pop-up how-to-play-txt ">
-                <p>Transfer the bars to the rightmost tower in the same order.</p> 
+                <p>Transfer the bars to the rightmost tower in the same sorted order.</p> 
                     <p>It is not allowed to put a bar on top of a smaller bar.</p>
                 <div 
                   className="btn btn-okay" 
@@ -115,18 +114,17 @@ class App extends Component {
         </div>
       </div>
       {/* Game box*/}
-      <Jello>
-        <div className="main">
-          {
-            <Game 
-              key={this.state.restart} 
-              items={this.state.items} 
-              onGameSolved={onGameSolved} 
-              incrementMoves={incrementMoves} 
-              gameStatus={this.state.gameStatus}/>
-          }  
-          </div>
-      </Jello>
+      <div className="main">
+        {
+          <Game 
+            key={this.state.restart} 
+            items={this.state.items} 
+            onGameSolved={onGameSolved} 
+            incrementMoves={incrementMoves} 
+            gameStatus={this.state.gameStatus}/>
+        }  
+      </div>
+     
       {/* Pop up div when game is isSolved*/}
       {
         this.state.isSolved 
